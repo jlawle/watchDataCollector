@@ -22,6 +22,10 @@
 		E5306EA425FD4504007A158A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5306EA325FD4504007A158A /* NotificationController.swift */; };
 		E5306EA625FD4504007A158A /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5306EA525FD4504007A158A /* ComplicationController.swift */; };
 		E5306EA825FD4505007A158A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5306EA725FD4505007A158A /* Assets.xcassets */; };
+		E5306ECF25FD601A007A158A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5306E9025FD4504007A158A /* Interface.storyboard */; };
+		E5306F1A261BAAE3007A158A /* motionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5306F19261BAAE3007A158A /* motionData.swift */; };
+		E5306F21261BB63C007A158A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5306F20261BB63C007A158A /* HealthKit.framework */; };
+		E5306F2A261BC047007A158A /* motionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5306F19261BAAE3007A158A /* motionData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +91,9 @@
 		E5306EA725FD4505007A158A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5306EA925FD4505007A158A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5306EAA25FD4505007A158A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		E5306F19261BAAE3007A158A /* motionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = motionData.swift; sourceTree = "<group>"; };
+		E5306F1E261BB63C007A158A /* watchSensorData-v1 WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "watchSensorData-v1 WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		E5306F20261BB63C007A158A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5306F21261BB63C007A158A /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +122,7 @@
 				E5306E8F25FD4504007A158A /* watchSensorData-v1 WatchKit App */,
 				E5306E9E25FD4504007A158A /* watchSensorData-v1 WatchKit Extension */,
 				E5306E7825FD4501007A158A /* Products */,
+				E5306F1F261BB63C007A158A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +139,7 @@
 		E5306E7925FD4501007A158A /* watchSensorData-v1 */ = {
 			isa = PBXGroup;
 			children = (
+				E5306F25261BBEF8007A158A /* Models */,
 				E5306E7A25FD4501007A158A /* AppDelegate.swift */,
 				E5306E7C25FD4501007A158A /* SceneDelegate.swift */,
 				E5306E7E25FD4501007A158A /* ViewController.swift */,
@@ -154,6 +164,7 @@
 		E5306E9E25FD4504007A158A /* watchSensorData-v1 WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E5306F1E261BB63C007A158A /* watchSensorData-v1 WatchKit Extension.entitlements */,
 				E5306E9F25FD4504007A158A /* InterfaceController.swift */,
 				E5306EA125FD4504007A158A /* ExtensionDelegate.swift */,
 				E5306EA325FD4504007A158A /* NotificationController.swift */,
@@ -163,6 +174,22 @@
 				E5306EAA25FD4505007A158A /* PushNotificationPayload.apns */,
 			);
 			path = "watchSensorData-v1 WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		E5306F1F261BB63C007A158A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5306F20261BB63C007A158A /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5306F25261BBEF8007A158A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E5306F19261BAAE3007A158A /* motionData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5306ECF25FD601A007A158A /* Interface.storyboard in Resources */,
 				E5306EA825FD4505007A158A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +327,7 @@
 				E5306E7F25FD4501007A158A /* ViewController.swift in Sources */,
 				E5306E7B25FD4501007A158A /* AppDelegate.swift in Sources */,
 				E5306E7D25FD4501007A158A /* SceneDelegate.swift in Sources */,
+				E5306F1A261BAAE3007A158A /* motionData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5306F2A261BC047007A158A /* motionData.swift in Sources */,
 				E5306EA425FD4504007A158A /* NotificationController.swift in Sources */,
 				E5306EA625FD4504007A158A /* ComplicationController.swift in Sources */,
 				E5306EA225FD4504007A158A /* ExtensionDelegate.swift in Sources */,
@@ -471,6 +501,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "watchSensorData-v1 WatchKit Extension/watchSensorData-v1 WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 832FHH55Z4;
 				INFOPLIST_FILE = "watchSensorData-v1 WatchKit Extension/Info.plist";
@@ -485,7 +516,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Debug;
 		};
@@ -493,6 +524,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "watchSensorData-v1 WatchKit Extension/watchSensorData-v1 WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 832FHH55Z4;
 				INFOPLIST_FILE = "watchSensorData-v1 WatchKit Extension/Info.plist";
@@ -508,7 +540,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Release;
 		};
@@ -528,7 +560,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Debug;
 		};
@@ -549,7 +581,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Release;
 		};
