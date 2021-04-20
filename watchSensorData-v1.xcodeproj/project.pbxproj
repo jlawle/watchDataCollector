@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F8ECA8C262D560700AC45A3 /* secondInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8ECA8B262D560700AC45A3 /* secondInterfaceController.swift */; };
+		1FB77FA5262D34F200B32F77 /* rowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB77FA4262D34F200B32F77 /* rowController.swift */; };
 		E5306E7B25FD4501007A158A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5306E7A25FD4501007A158A /* AppDelegate.swift */; };
 		E5306E7D25FD4501007A158A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5306E7C25FD4501007A158A /* SceneDelegate.swift */; };
 		E5306E7F25FD4501007A158A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5306E7E25FD4501007A158A /* ViewController.swift */; };
@@ -71,6 +73,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F8ECA8B262D560700AC45A3 /* secondInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondInterfaceController.swift; sourceTree = "<group>"; };
+		1FB77FA4262D34F200B32F77 /* rowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rowController.swift; sourceTree = "<group>"; };
 		E5306E7725FD4501007A158A /* watchSensorData-v1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "watchSensorData-v1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5306E7A25FD4501007A158A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5306E7C25FD4501007A158A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 				E5306EA725FD4505007A158A /* Assets.xcassets */,
 				E5306EA925FD4505007A158A /* Info.plist */,
 				E5306EAA25FD4505007A158A /* PushNotificationPayload.apns */,
+				1FB77FA4262D34F200B32F77 /* rowController.swift */,
+				1F8ECA8B262D560700AC45A3 /* secondInterfaceController.swift */,
 			);
 			path = "watchSensorData-v1 WatchKit Extension";
 			sourceTree = "<group>";
@@ -339,7 +345,9 @@
 				E5306EA425FD4504007A158A /* NotificationController.swift in Sources */,
 				E5306EA625FD4504007A158A /* ComplicationController.swift in Sources */,
 				E5306EA225FD4504007A158A /* ExtensionDelegate.swift in Sources */,
+				1FB77FA5262D34F200B32F77 /* rowController.swift in Sources */,
 				E5306EA025FD4504007A158A /* InterfaceController.swift in Sources */,
+				1F8ECA8C262D560700AC45A3 /* secondInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

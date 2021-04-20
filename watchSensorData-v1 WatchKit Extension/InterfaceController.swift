@@ -5,6 +5,21 @@
 //  Created by John Lawler on 3/13/21.
 //
 
+// NOTE TO DISCUSS (CB): error that happened when you hit stop, (the app crashing) happens whenever you hit ANY
+// button after the program begins recording (i.e same for when you try to add markers while it is recording)
+// task for the night: mimic structs from this file to my own and get the recording gyroscope data to work
+// without worryign about it continuing to record in the background, thought process is that I can slowly
+// add in the connectivity and health stuff to see where the issue is occurring
+
+// ALSO: the markers work perfectly fine when the app is not recoridng gyro data, and it logs it perfectly fine
+// added an if(recording) condition around the marker func, so if you want to test markers w/o the recording button
+// causing it to crash, just comment out the if condition and record the markers without hitting the record button
+
+// CB: 4/18/21 added marker & show button, second screen with table, and corresponding action function. Added timeFormatter
+//             function (a mod of the existing getTime() function) in the secondiInterfaceController, added rowController
+//             class file for marker display table, changed record button formatting so text switched to "recording..."
+//             when recording and back after stop for better readability
+
 import WatchKit
 import HealthKit
 import Foundation
@@ -37,12 +52,18 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
     var timeStamp = Date()
     var sensorData = [sensorParam]()
     
+    // Array to store marker time data (CB)
+    var markers = [markerMsg]()
+    
+    var recording: Bool = false     //CB
     
     
     
     // Buttons
     @IBOutlet var recordButton: WKInterfaceButton!
     @IBOutlet var stopButton: WKInterfaceButton!
+    @IBOutlet var markerButton: WKInterfaceButton!      //CB
+    @IBOutlet var showButton: WKInterfaceButton!        //CB
     
 
 
@@ -63,10 +84,30 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
         // This method is called when watch view controller is no longer visible
     }
     
+    // override that pushes to secondary screen when 'Show Markers' button is pushed
+    override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
+        if segueIdentifier == "markerSegue" {
+            return markers
+        }
+        print("returning nil")
+        return nil
+    }
+    
+    @IBAction func timeMarker() {       //CB
+      //  if(recording) {
+            markers.append(markerMsg(time: Date.init()))
+      //  }
+    }
+    
     @IBAction func stopRecording(){
         
        // motion.stopDeviceMotionUpdates()
         print("Stopped Recording...")
+        
+        // CB
+        if(recording) {
+            recordButton.setTitle("Record")
+        }
         
         
         
@@ -82,7 +123,13 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
 
     // Function to perform action when button tapped
     @IBAction func startRecording(){
-       
+        //CB
+        if(!recording) {
+            recordButton.setTitle("Recording...")
+        }
+        
+        recording = true                //CB
+        
         print("Recording...")
         let msg = "Starting watch recording"
         let debugMsg = DebugMsg(time: getTime(), message: msg)
@@ -197,12 +244,25 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
         let min = calendar.component(.minute, from: date)
         let sec = calendar.component(.second, from: date)
         let nsec = calendar.component(.nanosecond, from: date)
-        
+         
         let time = "\(hour):\(min):\(sec):\(nsec)"
         
         return time
         
+    }
+    
+    // alteration to John's getTime function, to format a time string
+    // based on the date passed to it, rather than the current date
+    func timeFormatter(date: Date) -> String {
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let min = calendar.component(.minute, from: date)
+        let sec = calendar.component(.second, from: date)
+        // let nsec = calendar.component(.nanosecond, from: date)
+        // removed nsec from format
+        let time = "\(hour):\(min):\(sec)"
         
+        return time
     }
     
     // WC needed method
