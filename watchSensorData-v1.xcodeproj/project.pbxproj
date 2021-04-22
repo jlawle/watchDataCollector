@@ -32,6 +32,8 @@
 		E5C379B02631304D005863D8 /* sensorParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C379AE2631304D005863D8 /* sensorParam.swift */; };
 		E5C379B526313122005863D8 /* fileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C379B426313122005863D8 /* fileData.swift */; };
 		E5C379B626313122005863D8 /* fileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C379B426313122005863D8 /* fileData.swift */; };
+		E5C379BB26313BE6005863D8 /* fileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C379BA26313BE6005863D8 /* fileStore.swift */; };
+		E5C379BC26313BE6005863D8 /* fileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C379BA26313BE6005863D8 /* fileStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,7 @@
 		E5306F20261BB63C007A158A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		E5C379AE2631304D005863D8 /* sensorParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sensorParam.swift; sourceTree = "<group>"; };
 		E5C379B426313122005863D8 /* fileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fileData.swift; sourceTree = "<group>"; };
+		E5C379BA26313BE6005863D8 /* fileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fileStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +205,7 @@
 				E5306F19261BAAE3007A158A /* motionData.swift */,
 				E5C379AE2631304D005863D8 /* sensorParam.swift */,
 				E5C379B426313122005863D8 /* fileData.swift */,
+				E5C379BA26313BE6005863D8 /* fileStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -340,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5306E7F25FD4501007A158A /* ViewController.swift in Sources */,
+				E5C379BB26313BE6005863D8 /* fileStore.swift in Sources */,
 				E5C379B526313122005863D8 /* fileData.swift in Sources */,
 				E5306E7B25FD4501007A158A /* AppDelegate.swift in Sources */,
 				E5C379AF2631304D005863D8 /* sensorParam.swift in Sources */,
@@ -355,6 +360,7 @@
 				E5306F2A261BC047007A158A /* motionData.swift in Sources */,
 				E5C379B626313122005863D8 /* fileData.swift in Sources */,
 				E5306EA425FD4504007A158A /* NotificationController.swift in Sources */,
+				E5C379BC26313BE6005863D8 /* fileStore.swift in Sources */,
 				E5306EA625FD4504007A158A /* ComplicationController.swift in Sources */,
 				E5306EA225FD4504007A158A /* ExtensionDelegate.swift in Sources */,
 				1FB77FA5262D34F200B32F77 /* rowController.swift in Sources */,

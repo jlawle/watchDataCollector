@@ -155,7 +155,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
         // Close session first so we know data is now available
         stopGettingData{ (sessionDone) in
             
-            
+            // build encoder, encode data to file
             
             
             
