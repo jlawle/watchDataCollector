@@ -99,6 +99,47 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
       //  }
     }
     
+    
+    // Run completion function to handle closing workout session prior to
+    // saving the data
+    func stopGettingData(handler: @escaping(_ sessionDone: Bool) -> ()) {
+
+        
+        // Check to make sure session is not nil
+        if (session == nil){
+            return
+        }
+        
+        // stop device motion updates
+        motion.stopDeviceMotionUpdates()
+        
+        // end our current workout session and builder
+        session!.end()
+        builder!.endCollection(withEnd: Date()) { (success, error) in
+            
+            guard success else {
+                // Handle erro
+                fatalError("Unable to end builder data collection: \(String(describing: error))")
+            }
+            
+            self.builder!.finishWorkout { (workout, error) in
+                
+                guard workout != nil else {
+                    // Handle errors.
+                    fatalError("Unable to finish builder workout: \(String(describing: error))")
+                }
+                
+                DispatchQueue.main.async() {
+                    // Update the user interface.
+                }
+            }
+        }
+        session=nil
+        handler(true)
+    }
+    
+    
+    
     @IBAction func stopRecording(){
         
        // motion.stopDeviceMotionUpdates()
@@ -110,13 +151,24 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
         }
         
         
+        // Close session and wrap up data to send
+        // Close session first so we know data is now available
+        stopGettingData{ (sessionDone) in
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        }
         
         
         // Create completion handler to stop device updates and
-        // workout session prior to sending data to ios
-        
-        
-        
+        // workout session prior to sending data to io
         
         
     }
@@ -131,13 +183,13 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
         recording = true                //CB
         
         print("Recording...")
-        let msg = "Starting watch recording"
-        let debugMsg = DebugMsg(time: getTime(), message: msg)
-        let session = WCSession.default
-        if session.activationState == .activated {
-            session.sendMessage(["debugMsg": debugMsg], replyHandler: nil, errorHandler: { error in print("error \(error)")})
-            
-        }
+//        let msg = "Starting watch recording"
+//        let debugMsg = DebugMsg(time: getTime(), message: msg)
+//        let session = WCSession.default
+//        if session.activationState == .activated {
+//            session.sendMessage(["debugMsg": debugMsg], replyHandler: nil, errorHandler: { error in print("error \(error)")})
+//
+//        }
         //session.sendMessage()
         
         
@@ -224,10 +276,10 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
         builder?.dataSource = HKLiveWorkoutDataSource(healthStore: healthStore, workoutConfiguration: workoutCfg)
 
         // Start session and builder
-        session?.startActivity(with: timeStamp)
-        builder?.beginCollection(withStart: timeStamp) { (success, error) in
+        session?.startActivity(with: Date())
+        builder?.beginCollection(withStart: Date()) { (success, error) in
             guard success else {
-                fatalError("Unable to begin builder collection of data")
+                fatalError("Unable to begin builder collection of data: \(String(describing: error))")
             }
             // Indicate that the session has started.
         }
