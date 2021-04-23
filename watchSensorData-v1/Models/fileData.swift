@@ -8,6 +8,7 @@
 import Foundation
 
 class fileData: Codable {
+    init() {}
     var duration: String?
     var sensorData = [sensorParam]()
 }

@@ -43,7 +43,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
     let queue = OperationQueue()
     let healthStore = HKHealthStore()
     let workoutCfg = HKWorkoutConfiguration()
-    var session: HKWorkoutSession? = nil
+    var WKsession: HKWorkoutSession? = nil
     var builder: HKLiveWorkoutBuilder? = nil
     var motion = CMMotionManager()
     var frequency: Int = 60
@@ -106,7 +106,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
 
         
         // Check to make sure session is not nil
-        if (session == nil){
+        if (WKsession == nil){
             return
         }
         
@@ -114,7 +114,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
         motion.stopDeviceMotionUpdates()
         
         // end our current workout session and builder
-        session!.end()
+        WKsession!.end()
         builder!.endCollection(withEnd: Date()) { (success, error) in
             
             guard success else {
@@ -134,7 +134,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
                 }
             }
         }
-        session=nil
+        WKsession = nil
         handler(true)
     }
     
@@ -225,7 +225,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
             // if data exists
             if data != nil {
                 // string interprolation
-                var output = sensorParam()
+                let output = sensorParam()
                 
                 output.time = Date()
                 //output.gyrox =
@@ -238,6 +238,13 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
                 output.accx = data!.userAcceleration.x
                 output.accy = data!.userAcceleration.y
                 output.accz = data!.userAcceleration.z
+                output.roll = data!.attitude.roll
+                output.pitch = data!.attitude.pitch
+                output.yaw = data!.attitude.yaw
+//                output.gravx = data!.gravity.x
+//                output.gravy= data!.gravity.y
+//                output.gravz = data!.gravity.z
+            
                 self.sensorData.append(output)
               
                 // prints data to outpu
@@ -260,23 +267,23 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
         
         // Create the workout session
         do {
-            session = try HKWorkoutSession(healthStore: healthStore, configuration: workoutCfg)
+            WKsession = try HKWorkoutSession(healthStore: healthStore, configuration: workoutCfg)
         } catch {
             print(error)
             //fatalError("Unable to create the workout session!")
-            session = nil
+            WKsession = nil
             return
         }
         
-        builder = session?.associatedWorkoutBuilder()
+        builder = WKsession?.associatedWorkoutBuilder()
         
         // Setup our session and builder
-        session?.delegate = self
+        WKsession?.delegate = self
         builder?.delegate = self
         builder?.dataSource = HKLiveWorkoutDataSource(healthStore: healthStore, workoutConfiguration: workoutCfg)
 
         // Start session and builder
-        session?.startActivity(with: Date())
+        WKsession?.startActivity(with: Date())
         builder?.beginCollection(withStart: Date()) { (success, error) in
             guard success else {
                 fatalError("Unable to begin builder collection of data: \(String(describing: error))")
@@ -287,6 +294,27 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
         
     }
 
+    // Send iOS activation message
+    func sendWakeMessage(){
+        
+        // Check for prior session start
+//        if (session == nil){
+//            return
+//        }
+            
+       // if session.activationState == .activated && session.isReachable {
+            
+            
+            
+        
+        
+        
+        
+        
+    }
+    
+    
+    
     
     // retrieve the time
     func getTime() -> String {

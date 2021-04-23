@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import CoreMotion
-import UIKit
 
 
 struct DebugMsg {

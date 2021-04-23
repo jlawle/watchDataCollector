@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import UIKit
-import CoreMotion
 
 
 // data sent from the watch
@@ -24,9 +22,15 @@ class sensorParam: Codable {
     var accy: Double?
     var accz: Double?
     
-    var magx: Double?
-    var magy: Double?
-    var magz: Double?
+    //attitude
+    var roll: Double?
+    var pitch: Double?
+    var yaw: Double?
+    
+    // magnometer
+    var gravx: Double?
+    var gravy: Double?
+    var gravz: Double?
     
     init() {}
 }
