@@ -37,13 +37,22 @@ class ViewController: UIViewController, WCSessionDelegate {
 //           
 //        }
         
+        // Test WC connection
         if let debugMsg = message["debugMsg"] as? String {
             print(debugMsg)
         }
     
-        if let marker = message["marker"] as? String {
+        // Handle marker button calls and print, eventually save 
+        if let marker = message["Markers"] as? String {
             // Save a marker at the given time provided
+            print("Marker recieved!")
+            print(marker)
         }
+    }
+    
+    
+    func session(_ session: WCSession, didReceive file: WCSessionFile){
+        
     }
     
     

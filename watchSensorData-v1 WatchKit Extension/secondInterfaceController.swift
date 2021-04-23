@@ -23,12 +23,12 @@ class secondInterfaceController: WKInterfaceController {
         // in every documentation I found
         
         // Configure interface objects here.
-        if context is [markerMsg] {
-            let array = context as! [markerMsg]
+        if context is [marker] {
+            let array = context as! [marker]
             markTable.setNumberOfRows(array.count, withRowType: "cell")
             var index = 0
             var timeStr: String
-            for entry in array as [markerMsg] {
+            for entry in array as [marker] {
                 let row = markTable.rowController(at: index) as! rowController
                 timeStr = timeFormatter(date: entry.time)
                 row.markLabel.setText("Marker \(index+1): \(timeStr)")

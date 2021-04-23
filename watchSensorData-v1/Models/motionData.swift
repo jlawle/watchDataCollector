@@ -13,9 +13,11 @@ struct DebugMsg {
     var message: String
 }
 
-struct markerMsg {
+struct marker: Codable {
     var time: Date
-    
 }
 
+struct markerData: Codable {
+    var markers = [marker]()
+}
 

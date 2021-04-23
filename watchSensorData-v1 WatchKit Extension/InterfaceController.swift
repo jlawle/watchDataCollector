@@ -53,7 +53,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
     var sensorData = [sensorParam]()
     
     // Array to store marker time data (CB)
-    var markers = [markerMsg]()
+    var markers = [marker]()
     
     var recording: Bool = false     //CB
     
@@ -68,6 +68,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
 
 
     override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
+        
         // Configure interface objects here.
         if(WCSession.isSupported()) {
             let session = WCSession.default
@@ -94,9 +96,20 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
     }
     
     @IBAction func timeMarker() {       //CB
-      //  if(recording) {
-            markers.append(markerMsg(time: Date.init()))
-      //  }
+        markers.append(marker(time: Date.init()))
+        
+        // send marker message back to device
+        let markerdata = markerData(markers: markers)
+        
+        // Begin session connection ideally
+        let session = WCSession.default
+        if session.activationState == .activated {
+            // Send message 
+            session.sendMessage(["Markers": markerdata], replyHandler: nil, errorHandler: { error in print("error \(error)")})
+       
+        }
+            //session.sendMessage()
+               
     }
     
     
@@ -156,10 +169,50 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
         stopGettingData{ (sessionDone) in
             
             // build encoder, encode data to file
+            let filename = "sensorOutput"
+            let filedata = fileData()
+            let encoder = JSONEncoder()
+            
+            // Load our data to save to file
+            filedata.sensorData = self.sensorData
+            //filedata.duration = self.duration
+            
+            var encodedata = Data()
+            // Encode data
+            do {
+                encodedata = try encoder.encode(filedata)
+            } catch {
+                print("Whoops, an error occured: \(error)")
+            }
             
             
+            // Open and save to file
+            let fileURL = try! FileManager.default
+                .url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+                .appendingPathComponent(filename)
+            
+            // Write data to file
+            do {
+                try encodedata.write(to: fileURL)
+            }
+            catch let error as NSError {
+                print("Saving file error: \(error)")
+            }
             
             
+            // check to make sure file exists
+            if !FileManager.default.fileExists(atPath: fileURL.path){
+                fatalError("File doese not exist!")
+            }
+           
+         
+            
+            
+            // Transfer file to iOS
+            let session = WCSession.default
+            if session.activationState == .activated {
+                session.transferFile(fileURL, metadata: nil)
+            }
             
             
             
