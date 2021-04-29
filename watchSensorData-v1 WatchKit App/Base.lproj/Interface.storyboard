@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="watchSensorData_v1_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="center" title="Record" id="sRp-9T-Kjr">
+                            <connections>
+                                <action selector="startRecording" destination="AgC-eL-Hgc" id="vMu-g9-xwf"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="center" title="Stop" id="dBJ-Jk-yJM">
+                            <connections>
+                                <action selector="stopRecording" destination="AgC-eL-Hgc" id="1vm-FZ-jEJ"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="center" title="Meal Marker" id="Hxv-2A-Csy">
+                            <connections>
+                                <action selector="timeMarker" destination="AgC-eL-Hgc" id="N8M-j1-WzL"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Show Markers" id="lLp-pr-Fne">
+                            <connections>
+                                <segue destination="GH4-nW-JO4" kind="push" identifier="markerSegue" id="z8u-ZC-TnY"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="markerButton" destination="Hxv-2A-Csy" id="0dV-XS-hPP"/>
+                        <outlet property="recordButton" destination="sRp-9T-Kjr" id="VIK-oI-USs"/>
+                        <outlet property="showButton" destination="lLp-pr-Fne" id="WW8-x8-gEM"/>
+                        <outlet property="stopButton" destination="dBJ-Jk-yJM" id="5Rf-vJ-H3p"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="259" y="27"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="watchSensorData_v1_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="watchSensorData_v1_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="345"/>
+        </scene>
+        <!--markers-->
+        <scene sceneID="Lyi-61-Nk8">
+            <objects>
+                <controller identifier="markers" id="GH4-nW-JO4" customClass="secondInterfaceController" customModule="watchSensorData_v1_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="4HK-zn-7N1">
+                            <items>
+                                <tableRow identifier="cell" id="GF5-tt-6bq" customClass="rowController" customModule="watchSensorData_v1_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="k6F-kc-6dN">
+                                        <items>
+                                            <label width="124" height="38" alignment="left" text="Label" id="grE-qm-7vo">
+                                                <fontDescription key="font" type="system" pointSize="12"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="markLabel" destination="grE-qm-7vo" id="zdV-U1-mvJ"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="markTable" destination="4HK-zn-7N1" id="Phv-9a-doU"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="486" y="26"/>
+        </scene>
+    </scenes>
+</document>
