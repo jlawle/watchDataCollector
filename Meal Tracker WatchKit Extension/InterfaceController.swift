@@ -235,6 +235,15 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
         
         recording = true                //CB
         
+        
+        // Begin session connection ideally
+//        let debugmsg = "Starting Recording"
+//        let session = WCSession.default
+//        if session.activationState == .activated {
+//            // Send message
+//            session.sendMessage(["debugMsg": debugmsg], replyHandler: nil, errorHandler: { error in print("error \(error)")})
+//       
+//        }
         print("Recording...")
 //        let msg = "Starting watch recording"
 //        let debugMsg = DebugMsg(time: getTime(), message: msg)
@@ -246,7 +255,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
         //session.sendMessage()
         
         
-       retrieveSensorData()
+       //retrieveSensorData()
     }
     
     
@@ -291,9 +300,9 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
                 output.accx = data!.userAcceleration.x
                 output.accy = data!.userAcceleration.y
                 output.accz = data!.userAcceleration.z
-                output.roll = data!.attitude.roll
-                output.pitch = data!.attitude.pitch
-                output.yaw = data!.attitude.yaw
+                //output.roll = data!.attitude.roll
+                //output.pitch = data!.attitude.pitch
+                //output.yaw = data!.attitude.yaw
 //                output.gravx = data!.gravity.x
 //                output.gravy= data!.gravity.y
 //                output.gravz = data!.gravity.z

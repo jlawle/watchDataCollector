@@ -14,6 +14,9 @@ class ViewController: UIViewController, WCSessionDelegate {
 
     var session: WCSession!
     
+   
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

@@ -9,16 +9,18 @@
 /* Begin PBXBuildFile section */
 		1F8ECA8C262D560700AC45A3 /* secondInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8ECA8B262D560700AC45A3 /* secondInterfaceController.swift */; };
 		1FB77FA5262D34F200B32F77 /* rowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB77FA4262D34F200B32F77 /* rowController.swift */; };
+		E512B2B02633BDFF00E51F38 /* Meal Tracker WatchKit Extension.appex in Resources */ = {isa = PBXBuildFile; fileRef = E5306E9A25FD4504007A158A /* Meal Tracker WatchKit Extension.appex */; };
+		E512B2DE2633BE4000E51F38 /* Meal Tracker WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = E5306E8B25FD4504007A158A /* Meal Tracker WatchKit App.app */; };
+		E512B2E62633BEC900E51F38 /* OSLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E512B2E52633BEC900E51F38 /* OSLog.framework */; };
 		E5306E7B25FD4501007A158A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5306E7A25FD4501007A158A /* AppDelegate.swift */; };
 		E5306E7D25FD4501007A158A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5306E7C25FD4501007A158A /* SceneDelegate.swift */; };
 		E5306E7F25FD4501007A158A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5306E7E25FD4501007A158A /* ViewController.swift */; };
 		E5306E8225FD4501007A158A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5306E8025FD4501007A158A /* Main.storyboard */; };
 		E5306E8425FD4504007A158A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5306E8325FD4504007A158A /* Assets.xcassets */; };
 		E5306E8725FD4504007A158A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5306E8525FD4504007A158A /* LaunchScreen.storyboard */; };
-		E5306E8C25FD4504007A158A /* watchSensorData-v1 WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E5306E8B25FD4504007A158A /* watchSensorData-v1 WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E5306E9225FD4504007A158A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5306E9025FD4504007A158A /* Interface.storyboard */; };
 		E5306E9425FD4504007A158A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5306E9325FD4504007A158A /* Assets.xcassets */; };
-		E5306E9B25FD4504007A158A /* watchSensorData-v1 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E5306E9A25FD4504007A158A /* watchSensorData-v1 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E5306E9B25FD4504007A158A /* Meal Tracker WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E5306E9A25FD4504007A158A /* Meal Tracker WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E5306EA025FD4504007A158A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5306E9F25FD4504007A158A /* InterfaceController.swift */; };
 		E5306EA225FD4504007A158A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5306EA125FD4504007A158A /* ExtensionDelegate.swift */; };
 		E5306EA425FD4504007A158A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5306EA325FD4504007A158A /* NotificationController.swift */; };
@@ -42,14 +44,14 @@
 			containerPortal = E5306E6F25FD4501007A158A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E5306E8A25FD4504007A158A;
-			remoteInfo = "watchSensorData-v1 WatchKit App";
+			remoteInfo = "Meal Tracker WatchKit App";
 		};
 		E5306E9C25FD4504007A158A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E5306E6F25FD4501007A158A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E5306E9925FD4504007A158A;
-			remoteInfo = "watchSensorData-v1 WatchKit Extension";
+			remoteInfo = "Meal Tracker WatchKit Extension";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -60,7 +62,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				E5306E9B25FD4504007A158A /* watchSensorData-v1 WatchKit Extension.appex in Embed App Extensions */,
+				E5306E9B25FD4504007A158A /* Meal Tracker WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,7 +73,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				E5306E8C25FD4504007A158A /* watchSensorData-v1 WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,7 +82,8 @@
 /* Begin PBXFileReference section */
 		1F8ECA8B262D560700AC45A3 /* secondInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondInterfaceController.swift; sourceTree = "<group>"; };
 		1FB77FA4262D34F200B32F77 /* rowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rowController.swift; sourceTree = "<group>"; };
-		E5306E7725FD4501007A158A /* watchSensorData-v1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "watchSensorData-v1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E512B2E52633BEC900E51F38 /* OSLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSLog.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/OSLog.framework; sourceTree = DEVELOPER_DIR; };
+		E5306E7725FD4501007A158A /* Meal Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5306E7A25FD4501007A158A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5306E7C25FD4501007A158A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E5306E7E25FD4501007A158A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,11 +91,11 @@
 		E5306E8325FD4504007A158A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5306E8625FD4504007A158A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5306E8825FD4504007A158A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E5306E8B25FD4504007A158A /* watchSensorData-v1 WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "watchSensorData-v1 WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5306E8B25FD4504007A158A /* Meal Tracker WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal Tracker WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5306E9125FD4504007A158A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		E5306E9325FD4504007A158A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5306E9525FD4504007A158A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E5306E9A25FD4504007A158A /* watchSensorData-v1 WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "watchSensorData-v1 WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5306E9A25FD4504007A158A /* Meal Tracker WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Meal Tracker WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5306E9F25FD4504007A158A /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		E5306EA125FD4504007A158A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		E5306EA325FD4504007A158A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -102,7 +104,7 @@
 		E5306EA925FD4505007A158A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5306EAA25FD4505007A158A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		E5306F19261BAAE3007A158A /* motionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = motionData.swift; sourceTree = "<group>"; };
-		E5306F1E261BB63C007A158A /* watchSensorData-v1 WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "watchSensorData-v1 WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		E5306F1E261BB63C007A158A /* Meal Tracker WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Meal Tracker WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		E5306F20261BB63C007A158A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		E5C379AE2631304D005863D8 /* sensorParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sensorParam.swift; sourceTree = "<group>"; };
 		E5C379B426313122005863D8 /* fileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fileData.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E512B2E62633BEC900E51F38 /* OSLog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,9 +134,9 @@
 		E5306E6E25FD4501007A158A = {
 			isa = PBXGroup;
 			children = (
-				E5306E7925FD4501007A158A /* watchSensorData-v1 */,
-				E5306E8F25FD4504007A158A /* watchSensorData-v1 WatchKit App */,
-				E5306E9E25FD4504007A158A /* watchSensorData-v1 WatchKit Extension */,
+				E5306E7925FD4501007A158A /* Meal Tracker */,
+				E5306E8F25FD4504007A158A /* Meal Tracker WatchKit App */,
+				E5306E9E25FD4504007A158A /* Meal Tracker WatchKit Extension */,
 				E5306E7825FD4501007A158A /* Products */,
 				E5306F1F261BB63C007A158A /* Frameworks */,
 			);
@@ -142,14 +145,14 @@
 		E5306E7825FD4501007A158A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E5306E7725FD4501007A158A /* watchSensorData-v1.app */,
-				E5306E8B25FD4504007A158A /* watchSensorData-v1 WatchKit App.app */,
-				E5306E9A25FD4504007A158A /* watchSensorData-v1 WatchKit Extension.appex */,
+				E5306E7725FD4501007A158A /* Meal Tracker.app */,
+				E5306E8B25FD4504007A158A /* Meal Tracker WatchKit App.app */,
+				E5306E9A25FD4504007A158A /* Meal Tracker WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E5306E7925FD4501007A158A /* watchSensorData-v1 */ = {
+		E5306E7925FD4501007A158A /* Meal Tracker */ = {
 			isa = PBXGroup;
 			children = (
 				E5306F25261BBEF8007A158A /* Models */,
@@ -161,23 +164,23 @@
 				E5306E8525FD4504007A158A /* LaunchScreen.storyboard */,
 				E5306E8825FD4504007A158A /* Info.plist */,
 			);
-			path = "watchSensorData-v1";
+			path = "Meal Tracker";
 			sourceTree = "<group>";
 		};
-		E5306E8F25FD4504007A158A /* watchSensorData-v1 WatchKit App */ = {
+		E5306E8F25FD4504007A158A /* Meal Tracker WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
 				E5306E9025FD4504007A158A /* Interface.storyboard */,
 				E5306E9325FD4504007A158A /* Assets.xcassets */,
 				E5306E9525FD4504007A158A /* Info.plist */,
 			);
-			path = "watchSensorData-v1 WatchKit App";
+			path = "Meal Tracker WatchKit App";
 			sourceTree = "<group>";
 		};
-		E5306E9E25FD4504007A158A /* watchSensorData-v1 WatchKit Extension */ = {
+		E5306E9E25FD4504007A158A /* Meal Tracker WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				E5306F1E261BB63C007A158A /* watchSensorData-v1 WatchKit Extension.entitlements */,
+				E5306F1E261BB63C007A158A /* Meal Tracker WatchKit Extension.entitlements */,
 				E5306E9F25FD4504007A158A /* InterfaceController.swift */,
 				E5306EA125FD4504007A158A /* ExtensionDelegate.swift */,
 				E5306EA325FD4504007A158A /* NotificationController.swift */,
@@ -188,12 +191,13 @@
 				1FB77FA4262D34F200B32F77 /* rowController.swift */,
 				1F8ECA8B262D560700AC45A3 /* secondInterfaceController.swift */,
 			);
-			path = "watchSensorData-v1 WatchKit Extension";
+			path = "Meal Tracker WatchKit Extension";
 			sourceTree = "<group>";
 		};
 		E5306F1F261BB63C007A158A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E512B2E52633BEC900E51F38 /* OSLog.framework */,
 				E5306F20261BB63C007A158A /* HealthKit.framework */,
 			);
 			name = Frameworks;
@@ -204,8 +208,8 @@
 			children = (
 				E5306F19261BAAE3007A158A /* motionData.swift */,
 				E5C379AE2631304D005863D8 /* sensorParam.swift */,
-				E5C379B426313122005863D8 /* fileData.swift */,
 				E5C379BA26313BE6005863D8 /* fileStore.swift */,
+				E5C379B426313122005863D8 /* fileData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,9 +217,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E5306E7625FD4501007A158A /* watchSensorData-v1 */ = {
+		E5306E7625FD4501007A158A /* Meal Tracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E5306EB525FD4505007A158A /* Build configuration list for PBXNativeTarget "watchSensorData-v1" */;
+			buildConfigurationList = E5306EB525FD4505007A158A /* Build configuration list for PBXNativeTarget "Meal Tracker" */;
 			buildPhases = (
 				E5306E7325FD4501007A158A /* Sources */,
 				E5306E7425FD4501007A158A /* Frameworks */,
@@ -227,14 +231,14 @@
 			dependencies = (
 				E5306E8E25FD4504007A158A /* PBXTargetDependency */,
 			);
-			name = "watchSensorData-v1";
-			productName = "watchSensorData-v1";
-			productReference = E5306E7725FD4501007A158A /* watchSensorData-v1.app */;
+			name = "Meal Tracker";
+			productName = "Meal Tracker";
+			productReference = E5306E7725FD4501007A158A /* Meal Tracker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E5306E8A25FD4504007A158A /* watchSensorData-v1 WatchKit App */ = {
+		E5306E8A25FD4504007A158A /* Meal Tracker WatchKit App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E5306EB125FD4505007A158A /* Build configuration list for PBXNativeTarget "watchSensorData-v1 WatchKit App" */;
+			buildConfigurationList = E5306EB125FD4505007A158A /* Build configuration list for PBXNativeTarget "Meal Tracker WatchKit App" */;
 			buildPhases = (
 				E5306E8925FD4504007A158A /* Resources */,
 				E5306EB025FD4505007A158A /* Embed App Extensions */,
@@ -244,14 +248,14 @@
 			dependencies = (
 				E5306E9D25FD4504007A158A /* PBXTargetDependency */,
 			);
-			name = "watchSensorData-v1 WatchKit App";
-			productName = "watchSensorData-v1 WatchKit App";
-			productReference = E5306E8B25FD4504007A158A /* watchSensorData-v1 WatchKit App.app */;
+			name = "Meal Tracker WatchKit App";
+			productName = "Meal Tracker WatchKit App";
+			productReference = E5306E8B25FD4504007A158A /* Meal Tracker WatchKit App.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
-		E5306E9925FD4504007A158A /* watchSensorData-v1 WatchKit Extension */ = {
+		E5306E9925FD4504007A158A /* Meal Tracker WatchKit Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E5306EAD25FD4505007A158A /* Build configuration list for PBXNativeTarget "watchSensorData-v1 WatchKit Extension" */;
+			buildConfigurationList = E5306EAD25FD4505007A158A /* Build configuration list for PBXNativeTarget "Meal Tracker WatchKit Extension" */;
 			buildPhases = (
 				E5306E9625FD4504007A158A /* Sources */,
 				E5306E9725FD4504007A158A /* Frameworks */,
@@ -261,9 +265,9 @@
 			);
 			dependencies = (
 			);
-			name = "watchSensorData-v1 WatchKit Extension";
-			productName = "watchSensorData-v1 WatchKit Extension";
-			productReference = E5306E9A25FD4504007A158A /* watchSensorData-v1 WatchKit Extension.appex */;
+			name = "Meal Tracker WatchKit Extension";
+			productName = "Meal Tracker WatchKit Extension";
+			productReference = E5306E9A25FD4504007A158A /* Meal Tracker WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
@@ -287,7 +291,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E5306E7225FD4501007A158A /* Build configuration list for PBXProject "watchSensorData-v1" */;
+			buildConfigurationList = E5306E7225FD4501007A158A /* Build configuration list for PBXProject "Meal Tracker" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -300,9 +304,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E5306E7625FD4501007A158A /* watchSensorData-v1 */,
-				E5306E8A25FD4504007A158A /* watchSensorData-v1 WatchKit App */,
-				E5306E9925FD4504007A158A /* watchSensorData-v1 WatchKit Extension */,
+				E5306E7625FD4501007A158A /* Meal Tracker */,
+				E5306E8A25FD4504007A158A /* Meal Tracker WatchKit App */,
+				E5306E9925FD4504007A158A /* Meal Tracker WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -312,7 +316,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E512B2B02633BDFF00E51F38 /* Meal Tracker WatchKit Extension.appex in Resources */,
 				E5306E8725FD4504007A158A /* LaunchScreen.storyboard in Resources */,
+				E512B2DE2633BE4000E51F38 /* Meal Tracker WatchKit App.app in Resources */,
 				E5306E8425FD4504007A158A /* Assets.xcassets in Resources */,
 				E5306E8225FD4501007A158A /* Main.storyboard in Resources */,
 			);
@@ -375,12 +381,12 @@
 /* Begin PBXTargetDependency section */
 		E5306E8E25FD4504007A158A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E5306E8A25FD4504007A158A /* watchSensorData-v1 WatchKit App */;
+			target = E5306E8A25FD4504007A158A /* Meal Tracker WatchKit App */;
 			targetProxy = E5306E8D25FD4504007A158A /* PBXContainerItemProxy */;
 		};
 		E5306E9D25FD4504007A158A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E5306E9925FD4504007A158A /* watchSensorData-v1 WatchKit Extension */;
+			target = E5306E9925FD4504007A158A /* Meal Tracker WatchKit Extension */;
 			targetProxy = E5306E9C25FD4504007A158A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -446,6 +452,9 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -505,6 +514,9 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -528,16 +540,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "watchSensorData-v1 WatchKit Extension/watchSensorData-v1 WatchKit Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "";
+				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 832FHH55Z4;
-				INFOPLIST_FILE = "watchSensorData-v1 WatchKit Extension/Info.plist";
+				INFOPLIST_FILE = "Meal Tracker WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.johnlawler.watchSensorData-v1.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnlawler.MealTracker.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -551,16 +565,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "watchSensorData-v1 WatchKit Extension/watchSensorData-v1 WatchKit Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 832FHH55Z4;
-				INFOPLIST_FILE = "watchSensorData-v1 WatchKit Extension/Info.plist";
+				INFOPLIST_FILE = "Meal Tracker WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.johnlawler.watchSensorData-v1.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnlawler.MealTracker.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -578,16 +593,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 832FHH55Z4;
-				IBSC_MODULE = watchSensorData_v1_WatchKit_Extension;
-				INFOPLIST_FILE = "watchSensorData-v1 WatchKit App/Info.plist";
+				IBSC_MODULE = Meal_Tracker_WatchKit_Extension;
+				INFOPLIST_FILE = "Meal Tracker WatchKit App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.johnlawler.watchSensorData-v1.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnlawler.MealTracker.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -605,16 +621,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 832FHH55Z4;
-				IBSC_MODULE = watchSensorData_v1_WatchKit_Extension;
-				INFOPLIST_FILE = "watchSensorData-v1 WatchKit App/Info.plist";
+				IBSC_MODULE = Meal_Tracker_WatchKit_Extension;
+				INFOPLIST_FILE = "Meal Tracker WatchKit App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.johnlawler.watchSensorData-v1.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnlawler.MealTracker.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -630,16 +647,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 832FHH55Z4;
-				INFOPLIST_FILE = "watchSensorData-v1/Info.plist";
+				INFOPLIST_FILE = "Meal Tracker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.johnlawler.watchSensorData-v1";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnlawler.MealTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -651,16 +670,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 832FHH55Z4;
-				INFOPLIST_FILE = "watchSensorData-v1/Info.plist";
+				INFOPLIST_FILE = "Meal Tracker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.johnlawler.watchSensorData-v1";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnlawler.MealTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -671,7 +692,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E5306E7225FD4501007A158A /* Build configuration list for PBXProject "watchSensorData-v1" */ = {
+		E5306E7225FD4501007A158A /* Build configuration list for PBXProject "Meal Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E5306EAB25FD4505007A158A /* Debug */,
@@ -680,7 +701,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E5306EAD25FD4505007A158A /* Build configuration list for PBXNativeTarget "watchSensorData-v1 WatchKit Extension" */ = {
+		E5306EAD25FD4505007A158A /* Build configuration list for PBXNativeTarget "Meal Tracker WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E5306EAE25FD4505007A158A /* Debug */,
@@ -689,7 +710,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E5306EB125FD4505007A158A /* Build configuration list for PBXNativeTarget "watchSensorData-v1 WatchKit App" */ = {
+		E5306EB125FD4505007A158A /* Build configuration list for PBXNativeTarget "Meal Tracker WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E5306EB225FD4505007A158A /* Debug */,
@@ -698,7 +719,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E5306EB525FD4505007A158A /* Build configuration list for PBXNativeTarget "watchSensorData-v1" */ = {
+		E5306EB525FD4505007A158A /* Build configuration list for PBXNativeTarget "Meal Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E5306EB625FD4505007A158A /* Debug */,
